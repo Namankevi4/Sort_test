@@ -1,0 +1,6 @@
+c:\users\alexandr\documents\visual studio 2012\Projects\Sort_lib\Sort_lib\bin\Debug\Sort_lib.exe.config
+c:\users\alexandr\documents\visual studio 2012\Projects\Sort_lib\Sort_lib\obj\Debug\Sort_lib.csprojResolveAssemblyReference.cache
+C:\Users\Alexandr\documents\visual studio 2012\Projects\Sort_lib\Sort_lib\bin\Debug\Sort_lib.exe
+C:\Users\Alexandr\documents\visual studio 2012\Projects\Sort_lib\Sort_lib\bin\Debug\Sort_lib.pdb
+C:\Users\Alexandr\documents\visual studio 2012\Projects\Sort_lib\Sort_lib\obj\Debug\Sort_lib.exe
+C:\Users\Alexandr\documents\visual studio 2012\Projects\Sort_lib\Sort_lib\obj\Debug\Sort_lib.pdb
