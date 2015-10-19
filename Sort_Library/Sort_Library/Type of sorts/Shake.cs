@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Sort_Library.Type_of_sorts
 {
-    public class Shake<T> : IType_of_sorts<T> where T : IComparable
+    public class Shake<T> : IType_of_sorts<T>
     {
-        public IList<T> sort(IList<T> mass2)
+        public IList<T> sort(IList<T> mass2, IComparer<T> comparator)
         {
 
             for (int i = 0; i < mass2.Count() / 2; i++)
@@ -18,13 +18,13 @@ namespace Sort_Library.Type_of_sorts
 
                 do
                 {
-                    if (mass2[beg].CompareTo(mass2[beg + 1]) == 1)
+                    if (comparator.Compare(mass2[beg], mass2[beg + 1]) == 1)
                     {
                         Swap(mass2, beg, beg + 1);
                     }
                     beg++;
 
-                    if (mass2[end - 1].CompareTo(mass2[end]) == 1)
+                    if (comparator.Compare(mass2[end - 1], mass2[end]) == 1)
                     {
                         Swap(mass2, end - 1, end);
                     }

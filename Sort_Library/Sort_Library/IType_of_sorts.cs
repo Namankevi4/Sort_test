@@ -8,6 +8,6 @@ namespace Sort_Library
 {
     public interface IType_of_sorts<T>
     {
-        IList<T> sort(IList<T> mass);
+        IList<T> sort(IList<T> mass, IComparer<T> comparator);
     }
 }

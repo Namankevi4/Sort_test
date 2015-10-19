@@ -6,25 +6,20 @@ using System.Threading.Tasks;
 
 namespace test_lib
 {
-    
-        class UserType : IComparable
-        {
-            public double IntValue { get; private set; }
 
-            public UserType(double value)
-            {
-                IntValue = value;
-            }
-
-            public override string ToString()
-            {
-                return IntValue.ToString();
-            }
-
-            public int CompareTo(object obj)
-            {
-                return IntValue.CompareTo((obj as UserType).IntValue);
-            }
+    class UserType
+    {
+        public double IntValue { get; private set; }
         
+        public UserType(double value)
+        {
+            IntValue = value;
+        }
+
+        public override string ToString()
+        {
+            return IntValue.ToString();
+        }
+
     }
 }

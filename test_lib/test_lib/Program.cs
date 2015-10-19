@@ -17,36 +17,36 @@ namespace test_lib
             l.Add(3);
             l.Add(7);
             l.Add(1);
-
-
-            List<UserType> ut = new List<UserType>();
-            new Bubble<UserType>().sort(ut);
-
             List<string> str = new List<string>() { "acbj", "bgf", "xcv", "ab" };
 
+            List<UserType> ut = new List<UserType>();
+            IComparer<UserType> comparator = new Comparator<UserType>();
+            IComparer<string> strcomparator = new DefaultComparator<String>();
+            
+
             IType_of_sorts<string> bubble_sort = new Bubble<string>();
-            List<string> e = (List<string>)bubble_sort.sort(str);
+            List<string> e = (List<string>)bubble_sort.sort(str, strcomparator);
             foreach (string d in e)
             {
                 Console.WriteLine(d);
             }
             Console.WriteLine();
 
-            IType_of_sorts<string> shake_sort = new Shake<string>();
-            e = (List<string>)bubble_sort.sort(str);
-            foreach (string d in e)
-            {
-                Console.WriteLine(d);
-            }
-            Console.WriteLine();
+            //IType_of_sorts<string> shake_sort = new Shake<string>();
+            //e = (List<string>)bubble_sort.sort(str);
+            //foreach (string d in e)
+            //{
+            //    Console.WriteLine(d);
+            //}
+            //Console.WriteLine();
 
-            IType_of_sorts<string> heap_sort = new Heap<string>();
-            e = (List<string>)bubble_sort.sort(str);
-            foreach (string d in e)
-            {
-                Console.WriteLine(d);
-            }
-            Console.WriteLine();
+            //IType_of_sorts<string> heap_sort = new Heap<string>();
+            //e = (List<string>)bubble_sort.sort(str);
+            //foreach (string d in e)
+            //{
+            //    Console.WriteLine(d);
+            //}
+            //Console.WriteLine();
         }
     }
 }
