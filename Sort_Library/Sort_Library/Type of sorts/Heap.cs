@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sort_lib
+namespace Sort_Library.Type_of_sorts
 {
-    class Heap<T> : IType_of_sorts<T> where T : IComparable<T>
+    public class Heap<T> : IType_of_sorts<T> where T : IComparable
     {
-        public IEnumerable<T> sort(IEnumerable<T> mass)
+        public IList<T> sort(IList<T> mass2)
         {
-            T[] mass2 = mass.ToArray<T>();
             for (int i = mass2.Count() / 2 - 1; i >= 0; i--)
             {
                 ShiftDown(mass2, i, mass2.Count());
@@ -25,7 +24,7 @@ namespace Sort_lib
             }
             return mass2;
         }
-        private void ShiftDown(T[] mass2, int i, int j)
+        private void ShiftDown(IList<T> mass2, int i, int j)
         {
             bool done = false;
 

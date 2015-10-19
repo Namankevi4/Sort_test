@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Управление общими сведениями о сборке осуществляется с помощью 
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("Sort_lib")]
+[assembly: AssemblyTitle("Sort_Library")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Sort_lib")]
+[assembly: AssemblyProduct("Sort_Library")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("aaab2ce4-6019-411b-9c39-beaa2bf00590")]
+[assembly: Guid("ee36a055-f8bb-4524-9f77-ee40bf8a0d37")]
 
 // Сведения о версии сборки состоят из следующих четырех значений:
 //

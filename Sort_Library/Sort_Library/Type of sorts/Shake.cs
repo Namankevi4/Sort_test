@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sort_lib
+namespace Sort_Library.Type_of_sorts
 {
-    class Shake<T> : IType_of_sorts<T> where T : IComparable<T>
+    public class Shake<T> : IType_of_sorts<T> where T : IComparable
     {
-        public IEnumerable<T> sort(IEnumerable<T> mass)
+        public IList<T> sort(IList<T> mass2)
         {
-            T[] mass2 = mass.ToArray<T>();
+
             for (int i = 0; i < mass2.Count() / 2; i++)
             {
                 int beg = 0;
@@ -34,14 +34,11 @@ namespace Sort_lib
             }
             return mass2;
         }
-        private void Swap(T[] collection, int i, int j)
+        private void Swap(IList<T> collection, int i, int j)
         {
             T item = collection[i];
             collection[i] = collection[j];
             collection[j] = item;
         }
-        
-        }
-
     }
-
+}

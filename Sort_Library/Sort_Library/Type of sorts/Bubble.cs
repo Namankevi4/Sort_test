@@ -4,19 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sort_lib
+namespace Sort_Library.Type_of_sorts
 {
-    class Bubble<T> : IType_of_sorts<T> where T : IComparable<T>
+    public class Bubble<T> : IType_of_sorts<T> where T : IComparable
     {
-        public IEnumerable<T> sort(IEnumerable<T> mass)
+        public IList<T> sort(IList<T> mass2)
         {
-            T[] mass2 = mass.ToArray<T>();
             T temp;
-            for (int i = 0; i < mass2.Length - 1; i++)
+            for (int i = 0; i < mass2.Count - 1; i++)
             {
-                for (int j = i + 1; j < mass2.Length; j++)
+                for (int j = i + 1; j < mass2.Count; j++)
                 {
-                    if (mass2[i].CompareTo(mass2[j])>0)
+                    if (mass2[i].CompareTo(mass2[j]) > 0)
                     {
                         temp = mass2[i];
                         mass2[i] = mass2[j];
@@ -25,8 +24,6 @@ namespace Sort_lib
                 }
             }
             return mass2;
-
-                 
         }
     }
 }

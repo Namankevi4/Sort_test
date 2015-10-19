@@ -1,0 +1,8 @@
+c:\users\alexandr\documents\visual studio 2012\Projects\test_lib\test_lib\bin\Debug\test_lib.exe.config
+c:\users\alexandr\documents\visual studio 2012\Projects\test_lib\test_lib\obj\Debug\test_lib.csprojResolveAssemblyReference.cache
+c:\users\alexandr\documents\visual studio 2012\Projects\test_lib\test_lib\bin\Debug\test_lib.exe
+c:\users\alexandr\documents\visual studio 2012\Projects\test_lib\test_lib\bin\Debug\test_lib.pdb
+c:\users\alexandr\documents\visual studio 2012\Projects\test_lib\test_lib\bin\Debug\Sort_Library.dll
+c:\users\alexandr\documents\visual studio 2012\Projects\test_lib\test_lib\bin\Debug\Sort_Library.pdb
+c:\users\alexandr\documents\visual studio 2012\Projects\test_lib\test_lib\obj\Debug\test_lib.exe
+c:\users\alexandr\documents\visual studio 2012\Projects\test_lib\test_lib\obj\Debug\test_lib.pdb

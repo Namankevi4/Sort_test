@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sort_lib
+namespace Sort_Library
 {
-   
-    interface IType_of_sorts<T>
+    public interface IType_of_sorts<T>
     {
-       IEnumerable<T> sort(IEnumerable<T> mass);
+        IList<T> sort(IList<T> mass);
     }
 }
