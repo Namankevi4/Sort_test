@@ -5,48 +5,40 @@ using System.Text;
 using System.Threading.Tasks;
 using Sort_Library;
 using Sort_Library.Type_of_sorts;
-
+using System.Diagnostics;
 namespace test_lib
 {
     class Program
     {
         static void Main(string[] args)
         {
-            List<int> l = new List<int>();
-            l.Add(2);
-            l.Add(3);
-            l.Add(7);
-            l.Add(1);
-            List<string> str = new List<string>() { "acbj", "bgf", "xcv", "ab" };
+            List<double> list = new List<double>();
+            Random random = new Random();
+            for (int i = 0; i < 10000; i++)
+            {
+                list.Add(random.NextDouble());
+            }
+    
+            SortList(list, new Heap<double>(), new DefaultComparator<double>());
+            SortList(list, new Shake<double>(), new DefaultComparator<double>());
+            SortList(list, new Bubble<double>(), new DefaultComparator<double>());
+        }
 
-            List<UserType> ut = new List<UserType>();
-            IComparer<UserType> comparator = new Comparator<UserType>();
-            IComparer<string> strcomparator = new DefaultComparator<String>();
+        static void SortList<T>(List<T> list, IType_of_sorts<T> sortable, IComparer<T> comp )
+        {
+            Stopwatch stopWatch = new Stopwatch();
+            stopWatch.Start();
+            sortable.sort(list, comp);
+            stopWatch.Stop();
+            TimeSpan ts = stopWatch.Elapsed;
+            string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
+            ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10);
+            Console.WriteLine(sortable.GetType().Name + " RunTime " + elapsedTime + "\n");
+        }
+            
             
 
-            IType_of_sorts<string> bubble_sort = new Bubble<string>();
-            List<string> e = (List<string>)bubble_sort.sort(str, strcomparator);
-            foreach (string d in e)
-            {
-                Console.WriteLine(d);
-            }
-            Console.WriteLine();
-
-            //IType_of_sorts<string> shake_sort = new Shake<string>();
-            //e = (List<string>)bubble_sort.sort(str);
-            //foreach (string d in e)
-            //{
-            //    Console.WriteLine(d);
-            //}
-            //Console.WriteLine();
-
-            //IType_of_sorts<string> heap_sort = new Heap<string>();
-            //e = (List<string>)bubble_sort.sort(str);
-            //foreach (string d in e)
-            //{
-            //    Console.WriteLine(d);
-            //}
-            //Console.WriteLine();
-        }
+           
+    }      
     }
-}
+
